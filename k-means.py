@@ -28,8 +28,8 @@ dtTest = [dTestX, dTestY]
 # =============================================================================
 X = np.array(list(zip(dTrainX, dTrainY)))
 #
-#plt.scatter(dTestX, dTestY)
-#plt.show()
+plt.scatter(dTestX, dTestY)
+plt.show()
 
 k = 5
 #
@@ -127,5 +127,7 @@ print('SSE : ',sse())
 sseCluster = [k, tempC, sse()]
 
 sseCluster = pd.DataFrame([sseCluster])
+finalResult = pd.DataFrame(separatedCluster)
+finalResult.to_csv('finalResult.csv', header=False, index=False)
 
     
